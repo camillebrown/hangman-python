@@ -33,6 +33,17 @@ class Word():
         self.guesses = 8
         # make a list of dashes that is the length of the chosen word
         self.word_to_dashes = list('_' * len(self.chosen_word))
+        # this method will split the word up into a list of dictionaries with 2 attributes:
+        # the letter/character, and a boolean representing whether or not it has been guessed
+        # self.word_to_dicts = []
+    
+    # def split_word(self, word):
+    #     print(word)
+    #     self.word_to_dicts.append({char, False} for char in word)
+    #     print(self.word_to_dicts)
+    #     # return [{char, False} for char in word]  
+    # COULDN'T FIGURE THIS OUT. NEED TO KEEP TRYING
+    
     
     def get_letter_index(self, letter):
         # enumerate() will count and provide the index for each character simultaneously
@@ -111,3 +122,8 @@ if __name__ == '__main__':
     word = Word(chosen_word)
     # execute the play function that is created within the class 
     word.play()
+
+# new_word = Word('hello')
+# new_name = new_word.chosen_word
+# print(new_word)
+# new_word.split_word(new_name)
